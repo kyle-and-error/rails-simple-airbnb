@@ -1,19 +1,25 @@
-<p id="notice"><%= notice %></p>
+<div class="map" style="background-image: url('https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200')"></div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @flat.name %>
-</p>
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="col-8">
+      <div class="flat-show-card">
+        <h1><%= @flat.name %></h1>
+        <p class="flat-show-address"><%= @flat.address %></p>
+      </div>
+      <div class="flat-show-card">
+        <h3>A bit more about this flat...</h3>
+        <p><%= @flat.description %></p>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="flat-show-card">
+        <h5>Book this place!</h5>
 
-<p>
-  <strong>Address:</strong>
-  <%= @flat.address %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @flat.description %>
-</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <p>
   <strong>Price per Night:</strong>
