@@ -15,20 +15,31 @@
     <div class="col-4">
       <div class="flat-show-card">
         <h5>Book this place!</h5>
+        <%= render 'booking_widget'%>
+      </div>
+      <div class="flat-show-card">
+        <h3>Details</h3>
+        <div class="flex">
+          <div class="flex">
+            <i class="fas fa-user-friends"></i><span><%= @flat.price_per_night %></span>
+          </div>
+          <div class="flex ml-3">
+            <i class="fas fa-dollar-sign"></i> <%= @flat.number_of_guests %>
+          </div>
+        </div>
+      </div>
+      <div class="flat-show-card">
+        <div class="flex-align">
+          <h6 class="no-mb">Share</h6>
 
+          <div class="flex">
+            <i class="fab fa-facebook-square fa-2x"></i>
+            <i class="fab fa-twitter-square fa-2x"></i>
+            <i class="fab fa-pinterest-square fa-2x"></i>
+            <i class="fa fa-envelope-square fa-2x"></i>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<p>
-  <strong>Price per Night:</strong>
-  <%= @flat.price_per_night %>
-</p>
-
-<p>
-  <strong>Max Guests:</strong>
-  <%= @flat.number_of_guests %>
-</p>
-
-<%= link_to 'Edit', edit_flat_path(@flat) %>
